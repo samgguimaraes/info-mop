@@ -1,0 +1,10 @@
+sample:
+  file: data/file_location.h5
+  columns:
+    col1: &c1
+      max value: 1000
+      min value: 0
+      nan fill: 0
+    col2:
+      <<: *c1
+      source: col_a

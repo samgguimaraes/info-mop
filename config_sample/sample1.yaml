@@ -1,0 +1,36 @@
+sample:
+  src: 'data/raw/file1'
+  rename columns:
+    col0: col_a
+    col1: col_b
+    col2: col_c
+    col3: col_d
+  fill na:
+    col0: 0
+  max value:
+    col_a: 1000
+    col_b: % 99
+    col_c: q 0.9
+    col_d: std 2
+  min value:
+    col_a: 0
+    col_b: % 1
+    col_c: q 0.1
+    col_d: std 2
+  remove columns:
+    - col4
+    - col5
+  op columns:
+    col_et:
+      - +
+      - col_a
+      - col_b
+      - col_c
+    col_e:
+      - /
+      - col_e1
+      - col_d
+    col_m:
+      - max
+  remove columns:
+    - col_et
