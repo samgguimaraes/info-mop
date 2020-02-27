@@ -1,7 +1,8 @@
 sample:
-  file: data/file_location.h5
+  file: data_sample/sample1.csv
   columns:
     col1: &c1
+      type: float
       max value: 1000
       min value: 0
       nan fill: 0

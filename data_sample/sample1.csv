@@ -1,0 +1,8 @@
+idx,col1,col_a,col2,col_b
+0,10,0,a,True
+1,100,-20,b,False
+2,20,50,a,True
+3,50,2000,a,False
+4,1000,NaN,b,False
+5,NaN,300,c,NaN
+6,-10,100,d,True
