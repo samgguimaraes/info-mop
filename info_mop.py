@@ -71,10 +71,12 @@ def eval_columns(node, df):
     Loop through the columns and call the eval_column for each
     '''
     for k, n in node.items():
+        source = n.get('source', k)
         if n == 'drop':
             df = df.drop(columns=k)
+        if n == 'drop na':
+            df = df.dropna(subset=source)
         else:
-            source = n.get('source', k)
             df.loc[:,k] = eval_column(n, df.loc[:,source].copy())
 
     return df

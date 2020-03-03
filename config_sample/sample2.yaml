@@ -9,3 +9,4 @@ sample:
     col2:
       <<: *c1
       source: col_a
+      drop na
